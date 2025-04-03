@@ -14,7 +14,7 @@ This Terraform module creates an AWS Lambda function using a specified source fi
 module "lambda_function" {
   source            = "suleman-cheema/terraform-aws-lambda"
   function_name     = "my_lambda_function"
-  source_code_path  = "./src/lambda_function.py"
+  source_code_path  = "${path.module}/files/lambda_a.py"
   source_code_type  = "file"
   entrypoint        = "lambda_function.lambda_handler"
   runtime          = "python3.12"
