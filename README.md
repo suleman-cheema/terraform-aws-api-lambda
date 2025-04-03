@@ -16,7 +16,7 @@ module "lambda_function" {
   function_name     = "my_lambda_function"
   source_code_path  = "${path.module}/files/lambda_a.py"
   source_code_type  = "file"
-  entrypoint        = "lambda_function.lambda_handler"
+  entrypoint        = "lambda_a"
   runtime          = "python3.12"
   memory_size      = 256
   timeout          = 15
